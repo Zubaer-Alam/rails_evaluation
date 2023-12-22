@@ -15,25 +15,15 @@ class BrandsController < ApplicationController
   def create
     @brand = Brand.new(brand_params)
 
-    respond_to do |format|
-      if @brand.save
-        format.html { redirect_to brands_path, notice: "Brand was successfully created." }
+    if @brand.save
+      respond_to do |format|
+        format.html { redirect_to brands_path, notice: "Brand was created successfully." }
         format.turbo_stream # Respond with Turbo Streams
-      else
-        format.html { render :new }
       end
+    else
+      render :new, status: :unprocessable_entity
     end
   end
-
-  # def create
-  #   @brand = Brand.new(brand_params)
-  #
-  #   if @brand.save
-  #     redirect_to brands_path, notice: "Brand was successfully created."
-  #   else
-  #     render :new
-  #   end
-  # end
 
   def edit
   end
@@ -48,7 +38,11 @@ class BrandsController < ApplicationController
 
   def destroy
     @brand.destroy
-    redirect_to brands_path, notice: "Brand was successfully destroyed."
+
+    respond_to do |format|
+      format.html { redirect_to brands_path, notice: "Brand was successfully destroyed." }
+      format.turbo_stream # Respond with Turbo Streams
+    end
   end
 
   private

@@ -1,0 +1,2 @@
+<%= turbo_stream.prepend "brands", partial: "brands/brand", locals: { brand: @brand } %>
+<%= turbo_stream.update Brand.new, "" %>

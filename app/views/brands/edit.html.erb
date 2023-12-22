@@ -7,7 +7,7 @@
 
   <%#= render "form", brand: @brand %>
 
-  <%= turbo_frame_tag "brand_#{@brand.id}" do %>
+  <%= turbo_frame_tag @brand do %>
     <%= render "form", brand: @brand %>
 
     <%#= link_to 'Cancel', brands_path(@brand) %>
