@@ -1,0 +1,12 @@
+<div class="quote">
+  <%= link_to brand.name, brand_path(brand) %>
+  <div class="brand__actions">
+    <%= button_to "Delete",
+                  brand_path(brand),
+                  method: :delete,
+                  class: "btn btn--light" %>
+    <%= link_to "Edit",
+                edit_brand_path(brand),
+                class: "btn btn--light" %>
+  </div>
+</div>

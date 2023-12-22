@@ -1,0 +1,10 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to brands"), brands_path %>
+
+  <div class="header">
+    <h1>New Brand</h1>
+  </div>
+  <%= turbo_frame_tag "first_turbo_frame" do %>
+    <%= render "form", brand: @brand %>
+  <% end %>
+</main>

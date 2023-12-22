@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'brands/index'
   get 'categories/index'
   get 'products/index'
+
+  resources :brands
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root "home#homepage"

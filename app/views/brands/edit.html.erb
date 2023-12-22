@@ -1,0 +1,16 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to Brands"), brands_path %>
+
+  <div class="header">
+    <h1>Edit Brand</h1>
+  </div>
+
+  <%= render "form", quote: @brand %>
+</main>
+
+<%# app/views/brands/edit.html.erb %>
+<%= turbo_frame_tag @brand do %>
+  <%= render "form" %>
+
+  <%= link_to 'Cancel', brands_path(@brand) %>
+<% end %>
