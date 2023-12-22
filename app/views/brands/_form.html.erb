@@ -1,4 +1,4 @@
-<%= simple_form_for @brand, html: { class: "brand form" } do |f| %>
+<%= simple_form_for brand, html: { class: "brand form" } do |f| %>
   <% if @brand.errors.any? %>
     <div class="error-message">
       <%= @brand.errors.full_messages.to_sentence.capitalize %>
@@ -6,5 +6,6 @@
   <% end %>
 
   <%= f.input :name, input_html: { autofocus: true } %>
+  <%= link_to "Cancel", brands_path, class: "btn btn-secondary" %>
   <%= f.submit class: "btn btn-danger" %>
 <% end %>

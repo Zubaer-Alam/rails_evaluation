@@ -2,7 +2,7 @@ class BrandsController < ApplicationController
   before_action :set_brand, only: [:show, :edit, :update, :destroy]
 
   def index
-    @brands = Brand.all
+    @brands = Brand.ordered
   end
 
   def show
@@ -14,11 +14,10 @@ class BrandsController < ApplicationController
 
   def create
     @brand = Brand.new(brand_params)
-
     if @brand.save
       respond_to do |format|
         format.html { redirect_to brands_path, notice: "Brand was created successfully." }
-        format.turbo_stream # Respond with Turbo Streams
+        format.turbo_stream
       end
     else
       render :new, status: :unprocessable_entity
@@ -38,7 +37,6 @@ class BrandsController < ApplicationController
 
   def destroy
     @brand.destroy
-
     respond_to do |format|
       format.html { redirect_to brands_path, notice: "Brand was successfully destroyed." }
       format.turbo_stream # Respond with Turbo Streams
