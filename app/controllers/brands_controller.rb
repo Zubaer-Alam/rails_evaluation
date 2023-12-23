@@ -16,7 +16,7 @@ class BrandsController < ApplicationController
     if @brand.save
       respond_to do |format|
         format.html { redirect_to brands_path, notice: 'Brand was created successfully.' }
-        format.turbo_stream {render :create}
+        format.turbo_stream 
       end
     else
       render :new, status: :unprocessable_entity
