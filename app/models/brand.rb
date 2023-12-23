@@ -5,7 +5,6 @@ class Brand < ApplicationRecord
   scope :ordered, -> { order(id: :desc) }
 
   private
-
   def normalize_name
     self.name = name.downcase.capitalize
   end

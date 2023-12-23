@@ -1,12 +1,11 @@
 class BrandsController < ApplicationController
-  before_action :set_brand, only: [:show, :edit, :update, :destroy]
+  before_action :set_brand, only: %i[show edit update destroy]
 
   def index
     @brands = Brand.ordered
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @brand = Brand.new
@@ -16,7 +15,7 @@ class BrandsController < ApplicationController
     @brand = Brand.new(brand_params)
     if @brand.save
       respond_to do |format|
-        format.html { redirect_to brands_path, notice: "Brand was created successfully." }
+        format.html { redirect_to brands_path, notice: 'Brand was created successfully.' }
         format.turbo_stream
       end
     else
@@ -24,12 +23,11 @@ class BrandsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @brand.update(brand_params)
-      redirect_to brands_path, notice: "Brand was successfully updated."
+      redirect_to brands_path, notice: 'Brand was successfully updated.'
     else
       render :edit, status: :unprocessable_entity
     end
@@ -38,8 +36,8 @@ class BrandsController < ApplicationController
   def destroy
     @brand.destroy
     respond_to do |format|
-      format.html { redirect_to brands_path, notice: "Brand was successfully destroyed." }
-      format.turbo_stream # Respond with Turbo Streams
+      format.html { redirect_to brands_path, notice: 'Brand was successfully destroyed.' }
+      format.turbo_stream
     end
   end
 
