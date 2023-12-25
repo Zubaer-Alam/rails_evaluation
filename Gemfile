@@ -10,10 +10,12 @@ gem 'rails', '~> 7.1.2'
 gem 'devise'
 
 gem 'rubocop'
-gem 'rubocop-rspec'
 gem 'rubocop-capybara'
 gem 'rubocop-rails'
+gem 'rubocop-rspec'
 gem 'simple_form'
+
+gem 'hotwire-livereload'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
