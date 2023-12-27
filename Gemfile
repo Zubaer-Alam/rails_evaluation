@@ -8,14 +8,11 @@ ruby '3.0.6'
 gem 'rails', '~> 7.1.2'
 
 gem 'devise'
-
-gem 'rubocop'
-gem 'rubocop-capybara'
-gem 'rubocop-rails'
-gem 'rubocop-rspec'
-gem 'simple_form'
-
+gem 'devise-bootstrap-views', '~> 1.0'
+gem 'devise-i18n'
 gem 'hotwire-livereload'
+gem 'rubocop'
+gem 'simple_form'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
