@@ -1,14 +1,11 @@
 <main class="container">
-  <%= link_to sanitize("&larr; Back to Brands"), brands_path %>
+  <%= link_to sanitize("&larr; Back to Categories"), categories_path %>
 
   <div class="header">
-    <h1>Edit Brand</h1>
+    <h1>Edit category</h1>
   </div>
 
-  <%#= render "form", brand: @brand %>
-
-  
-  <%= turbo_frame_tag @brand do %>
-    <%= render "form", brand: @brand %>
+  <%= turbo_frame_tag @category do %>
+    <%= render "form", category: @category %>
   <% end %>
 </main>

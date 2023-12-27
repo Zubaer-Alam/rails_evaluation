@@ -1,7 +1,7 @@
 <main class="container border rounded p-3 mt-3">
   <div class="header d-flex justify-content-between align-items-center">
     <h1>Products</h1>
-    <%= link_to "Add Product", new_product_path, data: { turbo_frame: dom_id(Product.new) }, class: "btn btn-primary m-2" %>
+    <%= link_to "Add Product", new_product_path, data: { turbo_frame: dom_id(Product.new) }, class: "btn btn-primary mb-2" %>
   </div>
   <%= turbo_frame_tag Product.new %>
   <%= turbo_stream_from "products" %>

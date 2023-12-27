@@ -1,0 +1,14 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to Products"), products_path, class: "btn btn-success mt-3" %>
+  <div class="card mt-3">
+    <div class="card-body">
+      <h1 class="card-title"><%= @product.name %></h1>
+      <div class="card-text">
+        <p><strong>Brand:</strong> <%= @product.brand.name %></p>
+        <p><strong>Category:</strong> <%= @product.category.name %></p>
+        <p><strong>Price:</strong> $<%= @product.price %></p>
+        <p><strong>Quantity:</strong> <%= @product.quantity %></p>
+      </div>
+    </div>
+  </div>
+</main>

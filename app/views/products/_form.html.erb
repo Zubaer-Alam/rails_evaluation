@@ -1,7 +1,6 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-6">
-      <%= simple_form_for product, html: { class: "card m-2 p-3" } do |f| %>
+      <%= simple_form_for product, html: { class: "card m-2 p-3", style: "width: 100%;" } do |f| %>
         <% if @product.errors.any? %>
           <div class="alert alert-danger">
             <%= @product.errors.full_messages.to_sentence.capitalize %>
@@ -22,5 +21,4 @@
         <%= link_to "Cancel", products_path, class: "btn btn-outline-danger mt-3 mr-2" %>
       <% end %>
     </div>
-  </div>
 </div>
