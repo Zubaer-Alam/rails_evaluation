@@ -5,9 +5,6 @@
     <h1>Edit Brand</h1>
   </div>
 
-  <%#= render "form", brand: @brand %>
-
-  
   <%= turbo_frame_tag @brand do %>
     <%= render "form", brand: @brand %>
   <% end %>
