@@ -1,24 +1,24 @@
-# README
+Prerequisites:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+   1. Git    : https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+   2. Docker : https://docs.docker.com/engine/install/
 
-Things you may want to cover:
+Steps:
 
-* Ruby version
+   1. Navigate to the directory where you want to clone the repository.
+   2. Open a terminal inside the folder and clone the repository by running the following command:
+                
+          git clone https://github.com/Zubaer-Alam/rails_evaluation
+          
+   3. Navigate to the app directory:
+            
+          cd rails_evaluation
+          
+   4. Build and run the Docker container:
+         
+          docker compose up -d
+          
+   5. Open your browser and access http://localhost:3001 to view the app.
+   6. After you have finished viewing the app, stop the container:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+          docker compose down
