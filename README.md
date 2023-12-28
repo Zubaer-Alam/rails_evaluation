@@ -23,3 +23,8 @@ Steps:
 
           docker compose down
 
+N.B: When accessing localhost:3001, if you get an error saying "ERR_SSL_PROTOCOL_ERROR", try accessing the application using incognito mode or clearing the browser cache data.
+This occurs because the browser tries to access "https://localhost:3001" instead of "http://locahost:3001". I am working on a fix for the problem. 
+
+By default, you can view the application on other devices on your local network. To do this, run "ipconfig" on your host machine's terminal and get the local IPv4 address of your machine.
+Then you can access the application on any other device on the same network by accessing http://<your_ip_address>:3001 
