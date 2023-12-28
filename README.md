@@ -14,11 +14,12 @@ Steps:
             
           cd rails_evaluation
           
-   4. Build and run the Docker container:
+   4. Build and run the Docker containers:
          
           docker compose up -d
           
    5. Open your browser and access http://localhost:3001 to view the app.
-   6. After you have finished viewing the app, stop the container:
+   6. After you have finished viewing the app, stop the containers:
 
           docker compose down
+
