@@ -1,7 +1,7 @@
 <%= turbo_frame_tag product do %>
   <div class="card mb-3">
     <div class="card-body">
-      <h5 class="card-title"><%= link_to product.name, product_path(product), data: { turbo_frame: "_top" } %></h5>
+      <h5 class="card-title"><%= link_to product.name, product_path(product), data:  { turbo_frame: dom_id(product) } %></h5>
       <div class="d-flex justify-content-end">
         <%= button_to "Delete",
                       product_path(product),
