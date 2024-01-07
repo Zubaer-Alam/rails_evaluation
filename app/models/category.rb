@@ -4,9 +4,11 @@ class Category < ApplicationRecord
   scope :ordered, -> { order(id: :desc) }
   broadcasts_to ->(_category) { 'categories' }, inserts_by: :prepend
 
+  before_validation :normalize_name
+
   private
 
   def normalize_name
-    self.name = name.downcase.capitalize
+    self.name = name.split.map(&:capitalize).join(' ') if name.present?
   end
 end
