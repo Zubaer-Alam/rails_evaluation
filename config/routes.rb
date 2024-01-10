@@ -1,12 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # get 'brands/index'
-  # get 'categories/index'
-  # get 'products/index'
   root 'products#index'
-  devise_for :users
-
+  devise_for :users, controllers: { registrations: 'registrations' }
   resources :brands
   resources :categories
   resources :products
@@ -16,6 +12,4 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', as: :rails_health_check
   get 'homepage' => 'home#homepage'
   get 'dashboard' => 'home#dashboard'
-  # Defines the root path route ("/")
-  # root "posts#index"
 end
